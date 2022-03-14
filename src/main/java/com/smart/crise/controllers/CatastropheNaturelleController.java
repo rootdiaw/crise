@@ -38,8 +38,8 @@ public class CatastropheNaturelleController {
     public CatastropheNaturelle addNaturel(@RequestBody CatastropheNaturelle catastropheNaturelle){
             return catastropheNaturelleService.addNewCatastropheNaturelle(catastropheNaturelle);
     }
-    @PutMapping("/{id}")
-    public CatastropheNaturelle updatePro (@PathVariable("id") Long id, @RequestBody CatastropheNaturelle catastropheNaturelle){
+        @PutMapping("/{id}")
+        public CatastropheNaturelle updatePro (@PathVariable("id") Long id, @RequestBody CatastropheNaturelle catastropheNaturelle){
         CatastropheNaturelle catas= catastropheNaturelleService.getCatastropheNaturelleParId(id);
         catas.setVitesse(catastropheNaturelle.getVitesse());
         catas.setFrequence(catastropheNaturelle.getFrequence());

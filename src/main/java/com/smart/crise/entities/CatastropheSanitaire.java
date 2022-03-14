@@ -20,4 +20,11 @@ public class CatastropheSanitaire {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idsanitaire;
+    private String vitesse;
+    private String frequence;
+    private String ampleur;
+    private String niveaucontrole;
+    private String niveauperte;
+
+    private  String codefiche;
 }

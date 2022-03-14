@@ -9,22 +9,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CatastropheSecuritaire {
+public class Utilisateur implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idsecuritaire;
-    private String vitesse;
-    private String frequence;
-    private String ampleur;
-    private String niveaucontrole;
-    private String niveauperte;
+    private Long idutilisateur;
+    private String login;
+    private String password;
+    private String email;
 
-    private String codefiche;
 }
